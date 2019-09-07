@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
 import { MenuItem } from 'primeng/api';
 
 
@@ -8,13 +8,18 @@ import { MenuItem } from 'primeng/api';
   styleUrls: ['./header.component.scss']
 })
 export class HeaderComponent implements OnInit {
+  @Output() SidebarStatusChange = new EventEmitter<boolean>();
 
-  items: MenuItem[];
+  NavItems: MenuItem[];
+  UserMenu: MenuItem[];
+
+  public status = true;
+  public myHeaderIcon = {};
 
   constructor() { }
 
   ngOnInit() {
-    this.items = [
+    this.NavItems = [
       {
         label: 'File',
         items: [{
@@ -38,6 +43,30 @@ export class HeaderComponent implements OnInit {
         ]
       }
     ];
+
+    this.UserMenu = [
+      { label: 'New', icon: 'pi pi-fw pi-plus' },
+      { label: 'Open', icon: 'pi pi-fw pi-download' },
+      { label: 'Undo', icon: 'pi pi-fw pi-refresh' }
+    ];
+
+    // 初始化按钮状态
+    this.setSidebarStatus();
   }
+
+  changeSidebarStatus(): void {
+    this.status = !this.status;
+    this.setSidebarStatus();
+    this.SidebarStatusChange.emit();
+  }
+
+  setSidebarStatus(): void {
+    // CSS classes: added/removed per current state of component properties
+    this.myHeaderIcon = {
+      'pi-align-right': !this.status,
+      'pi-align-left': this.status
+    };
+  }
+
 
 }

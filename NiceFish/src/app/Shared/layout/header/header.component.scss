@@ -3,26 +3,30 @@
 
     // }
     &-nav {
-        // &__wrap {
-
-        // }
-
-        &__collapse {
-            justify-content: flex-end;
+        &__wrap {
+            // overflow: hidden;
+            justify-content: space-between;
         }
-    }
-
-    &__menubar {
-
-        &.ui-menubar {
-            color: red !important;
-            border: none;
-            background: none;
-        }
-
     }
     
     &--search__wrap {
-        margin-top: 5px;
+        margin-top: 0px;
+
+        .HeaderUserBtn {
+            margin-left: 10px;
+        }
     }
+
+    &--sidebar__target {
+        height: 100%;
+        line-height: 100%;
+        cursor: pointer;
+    }
+
+    &--card__UserImg {
+        cursor: pointer;
+    }
+
+
+
 }

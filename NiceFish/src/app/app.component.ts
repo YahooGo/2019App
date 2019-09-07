@@ -9,8 +9,13 @@ import { MenuItem } from 'primeng/api';
 
 export class AppComponent {
 
-
-
   title = 'NiceFish';
+  public hideSidebar = false;
+
+  SidebarStatusChange(): void {
+
+
+    this.hideSidebar = !this.hideSidebar;
+  }
 
 }

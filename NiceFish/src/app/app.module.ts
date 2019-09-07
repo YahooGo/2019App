@@ -8,8 +8,10 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 // 引入共享module
 import { SharedModule } from './Shared/shared.module';
-
-
+// UI 框架
+import { UiModule } from './Shared/ui/ui.module';
+// 自定义组件
+import { LayoutModule } from './Shared/layout/layout.module';
 
 @NgModule({
   declarations: [
@@ -20,6 +22,8 @@ import { SharedModule } from './Shared/shared.module';
     AppRoutingModule,
     BrowserAnimationsModule,
     SharedModule,
+    UiModule,
+    LayoutModule,
   ],
   providers: [],
   bootstrap: [AppComponent]

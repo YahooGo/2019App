@@ -1,21 +1,16 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import { BrowserModule } from '@angular/platform-browser';
 
-// UI 框架
-import { UiModule } from './ui/ui.module';
-// 自定义组件
-import { LayoutModule } from './layout/layout.module';
 
 @NgModule({
   declarations: [],
   imports: [
     CommonModule,
-    UiModule,
-    LayoutModule,
+    BrowserModule
   ],
   exports: [
-    UiModule,
-    LayoutModule,
+    BrowserModule
   ]
 })
 export class SharedModule { }

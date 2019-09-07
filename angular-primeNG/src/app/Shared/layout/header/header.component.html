@@ -1,0 +1,21 @@
+<div class="container-fluid bg-light my-header__wrap">
+    <nav class="navbar bg-light my-header-nav__wrap">
+
+        <a class="navbar-brand my-header--sidebar__target" (click)="changeSidebarStatus()">
+            <i class="pi" [ngClass]="myHeaderIcon"></i>
+        </a>
+        <div>
+            <p-menu [autoZIndex]="true" styleClass="my-header-pMenu" appendTo="body" #menu [popup]="true"
+                [model]="UserMenu">
+            </p-menu>
+            <p-card class="my-header--card__UserImg" (click)="menu.toggle($event)">
+                <img src="https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1567868170565&di=90af1a2b5b66f0fd12250fedd21ed0da&imgtype=0&src=http%3A%2F%2Fimg3.redocn.com%2Ftupian%2F20100212%2Fwumaobizitupian_134486_small.jpg"
+                    alt="" width="30" height="30">
+            </p-card>
+        </div>
+
+    </nav>
+
+
+
+</div>

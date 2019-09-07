@@ -1,0 +1,28 @@
+.my-header{
+    &__wrap{
+
+    }
+    &-nav {
+        &__wrap {
+
+        }
+
+        &__collapse {
+            justify-content: flex-end;
+        }
+    }
+
+    &__menubar {
+
+        &.ui-menubar {
+            color: red !important;
+            border: none;
+            background: none;
+        }
+
+    }
+    
+    &--search__wrap {
+        margin-top: 5px;
+    }
+}

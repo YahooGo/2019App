@@ -1,0 +1,23 @@
+<div class="container-fluid bg-light my-header__wrap">
+    <nav class="navbar navbar-expand-lg navbar-light bg-light my-app-nav__wrap">
+        <!-- logo -->
+        <a class="navbar-brand" href="#">
+            <img src="http://118.25.136.164/assets/imgs/nice-fish.png" width="30" height="30" alt="">
+        </a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup"
+            aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse my-header-nav__collapse" id="navbarNavAltMarkup">
+            <div class="navbar-nav">
+                <p-menubar styleClass="my-header__menubar" [model]="items">
+                    <div class="my-header--search__wrap">
+                        <input type="text" pInputText placeholder="Search">
+                    </div>
+                </p-menubar>
+            </div>
+
+        </div>
+    </nav>
+</div>

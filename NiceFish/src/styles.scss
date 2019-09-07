@@ -1,1 +1,16 @@
 /* You can add global styles to this file, and also import other style files */
+
+// Your variable overrides
+// $body-bg: #000;
+// $body-color: #111;
+
+// Bootstrap and its default variables
+@import "../node_modules/bootstrap/scss/bootstrap";
+
+
+
+.my-header__menubar.ui-menubar {
+    color: red !important;
+    border: none;
+    background: none;
+}

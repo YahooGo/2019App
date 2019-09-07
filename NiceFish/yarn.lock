@@ -104,7 +104,7 @@
     "@angular-devkit/core" "8.2.2"
     rxjs "6.4.0"
 
-"@angular/animations@~8.2.0":
+"@angular/animations@^8.2.5":
   version "8.2.5"
   resolved "https://registry.npm.taobao.org/@angular/animations/download/@angular/animations-8.2.5.tgz#847296d12690c1e385f6f790fbb472d0e4aabde9"
   integrity sha1-hHKW0SaQweOF9veQ+7Ry0OSqvek=
@@ -1115,6 +1115,11 @@ bonjour@^3.5.0:
     dns-txt "^2.0.2"
     multicast-dns "^6.0.1"
     multicast-dns-service-types "^1.1.0"
+
+bootstrap@^4.3.1:
+  version "4.3.1"
+  resolved "https://registry.npm.taobao.org/bootstrap/download/bootstrap-4.3.1.tgz#280ca8f610504d99d7b6b4bfc4b68cec601704ac"
+  integrity sha1-KAyo9hBQTZnXtrS/xLaM7GAXBKw=
 
 brace-expansion@^1.1.7:
   version "1.1.11"

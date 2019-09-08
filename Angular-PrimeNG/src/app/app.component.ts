@@ -1,5 +1,5 @@
-import { Component, OnInit } from '@angular/core';
-import { MenuItem } from 'primeng/api';
+import { Component } from '@angular/core';
+
 
 @Component({
   selector: 'app-root',
@@ -10,12 +10,6 @@ import { MenuItem } from 'primeng/api';
 export class AppComponent {
 
   title = 'NiceFish';
-  public hideSidebar = false;
 
-  SidebarStatusChange(): void {
-
-
-    this.hideSidebar = !this.hideSidebar;
-  }
 
 }

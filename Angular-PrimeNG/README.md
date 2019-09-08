@@ -1,4 +1,21 @@
-# NiceFish
+# Angular-PrimeNG
+
+# 设计方案
+
+## Modules 
+用于存放页面级别组件
+
+## Shared 共享模块
+### Layout 存放自定义共享组件
+### UI 用于存放UI框架组件
+### Service 用于存放服务
+### Pipes 用于存放管道
+
+## Http 用于存放 api 与 拦截器 
+
+
+
+
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 8.2.0.
 

@@ -1,9 +1,10 @@
 <p-sidebar [(visible)]="hideSidebar" [style]="{width:'180px'}" [showCloseIcon]="false" styleClass="my-sidebar"
     (onHide)="handleSideBarHiden()" [dismissible]="true">
     <!-- logo -->
-    <a class="my-sidebar__logo" href="#">
-        <img src="http://118.25.136.164/assets/imgs/nice-fish.png" width="60" height="60" alt="">
-    </a>
+    <div class="my-sidebar__logo" href="#">
+        <img src="https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1567915451943&di=2c79f751e9854de98aac3775171109de&imgtype=0&src=http%3A%2F%2Fku.90sjimg.com%2Felement_origin_min_pic%2F17%2F04%2F19%2F9c8bbefc20a2e089fdaf606b4c6c2cb2.jpg"
+            width="178" height="120" alt="">
+    </div>
     <p-scrollPanel [style]="{width: '100%', height: '100%'}">
         <!-- 侧边栏-->
         <p-panelMenu [multiple]="false" [model]="sidebarItems" styleClass="my-sidebar__wrap"

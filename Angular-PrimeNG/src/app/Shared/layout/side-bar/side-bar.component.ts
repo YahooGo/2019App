@@ -28,7 +28,7 @@ export class SideBarComponent implements OnInit {
           {
             label: 'Open',
             icon: 'pi pi-fw pi-external-link',
-            routerLink: ['/main'],
+            routerLink: ['/login'],
             command: (data) => {
               this.handleSideBarItem(data);
             },

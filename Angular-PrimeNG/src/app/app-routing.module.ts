@@ -4,12 +4,21 @@ import { AppComponent } from './app.component';
 
 const routes: Routes = [
   {
-    path: 'main',
-    component: AppComponent,
+    path: '',
+    redirectTo: 'home',
+    pathMatch: 'full'
   },
   {
     path: 'home',
-    component: AppComponent,
+    loadChildren: () => import('./Modules/home/home.module').then(m => m.HomeModule),
+  },
+  {
+    path: 'login',
+    loadChildren: () => import('./Modules/login/login.module').then(m => m.LoginModule),
+  },
+  {
+    path: '**',
+    loadChildren: () => import('./Modules/home/home.module').then(m => m.HomeModule),
   }
 ];
 

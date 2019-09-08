@@ -13,8 +13,13 @@
 
 ## Http 用于存放 api 与 拦截器 
 
+# 【组件】不应该直接获取或保存数据，它们不应该了解是否在展示假数据。 它们应该聚焦于展示数据，而把数据访问的职责委托给某个服务。
 
+# 【服务】可以从任何地方获取数据：Web 服务、本地存储（LocalStorage）或一个模拟的数据源。
 
+由于组件中获取数据为异步行为，服务必须具有某种形式的【异步函数签名】,它可以使用回调函数，可以返回 Promise（承诺），也可以返回 Observable（可观察对象）
+
+## 组件一定要轻量级 / 服务才是重量级业务操作
 
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 8.2.0.

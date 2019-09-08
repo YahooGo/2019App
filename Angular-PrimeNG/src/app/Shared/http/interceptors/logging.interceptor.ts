@@ -8,7 +8,7 @@ import { catchError, retry } from 'rxjs/operators';
 
 /** Pass untouched request through to the next request handler. */
 @Injectable()
-export class LogginInterceptor implements HttpInterceptor {
+export class LoggingInterceptor implements HttpInterceptor {
     // 错误处理函数
     private handleError(error: HttpErrorResponse) {
         if (error.error instanceof ErrorEvent) {

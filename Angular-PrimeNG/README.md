@@ -8,8 +8,8 @@
 ## Shared 共享模块
 ### Layout 存放自定义共享组件
 ### UI 用于存放UI框架组件
-### Service 用于存放服务
-### Pipes 用于存放管道
+### Service 用于存放服务【共享级别】
+### Pipes 用于存放管道【共享级别】
 
 ## Http 用于存放 api 与 拦截器 
 

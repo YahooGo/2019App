@@ -22,7 +22,9 @@
 
 ## 组件一定要轻量级 / 服务才是重量级业务操作
 
+------
 
+## Angular Cli 版本
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 8.2.0.
 
 ## Development server

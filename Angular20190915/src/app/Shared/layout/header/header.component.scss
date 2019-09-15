@@ -1,0 +1,32 @@
+.my-header{
+    // &__wrap{
+
+    // }
+    &-nav {
+        &__wrap {
+            // overflow: hidden;
+            justify-content: space-between;
+        }
+    }
+    
+    &--search__wrap {
+        margin-top: 0px;
+
+        .HeaderUserBtn {
+            margin-left: 10px;
+        }
+    }
+
+    &--sidebar__target {
+        height: 100%;
+        line-height: 100%;
+        cursor: pointer;
+    }
+
+    &--card__UserImg {
+        cursor: pointer;
+    }
+
+
+
+}

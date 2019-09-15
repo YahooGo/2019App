@@ -1,0 +1,99 @@
+/* You can add global styles to this file, and also import other style files */
+// Your variable overrides
+// $body-bg: #000;
+// $body-color: #111;
+
+// Bootstrap and its default variables
+@import "../node_modules/bootstrap/scss/bootstrap";
+
+$sidebar-bg-color: #f8f9fa;
+
+:focus {
+    outline: none;
+}
+
+html,body,app-root{
+    width: 100vw;
+    height: 100vh;
+}
+app-root {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+
+    .my-app-main {
+        flex: 1;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+
+        .app-side-bar {
+            background: $sidebar-bg-color;
+        }
+
+        .app-work-space {
+            flex: 1;
+        }
+    }
+}
+
+.my {
+    &-header__menubar {
+        &.ui-menubar {
+            color: red !important;
+            border: none;
+            background: none;
+        }
+    }
+    
+    &-header-pMenu {
+        color: red;
+        left: auto !important;
+        top: 70px !important;
+        right: 30px !important;
+    }
+    
+    &-sidebar {
+        overflow: hidden;
+        
+        &.ui-sidebar {
+            padding-left: 0;
+            padding-right: 0;
+            padding-top: 0;
+        }
+ 
+        &__wrap {
+            background: $sidebar-bg-color;
+            border-right: 1px solid $sidebar-bg-color;
+        
+            &.ui-panelmenu {
+                .ui-panelmenu-panel:first-child {
+                    margin-top: 1px;
+                }
+        
+                .ui-panelmenu-content {
+                    border: none;
+        
+                }
+        
+                .ui-panelmenu-header > a  {
+                    border: 1px solid $sidebar-bg-color;
+                    background: $sidebar-bg-color;
+                }
+            }
+        }
+
+        // 激活状态路由
+        .ui-state-active {
+            background: lightcyan;
+        }
+    }
+}
+
+.my-login__Card {
+    width: 300px;
+    height: 300px;
+    &.ui-card {
+        background-color: rgba(0, 0, 0, 0.5);
+    }
+}

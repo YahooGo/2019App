@@ -1,0 +1,50 @@
+.my-login {
+
+
+
+    &__wrap {
+        width: 100vw;
+        height: 100vh;
+        padding: 0;
+        margin: 0;
+        overflow: hidden;
+        position: relative;
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+        flex-direction: row;
+
+        .was-validated {
+            .my-display-block {
+                display: block;
+            }
+        }
+
+    }
+    
+    &-bg__img {
+        position: absolute;
+        top: 0;
+        z-index: -1;
+    }
+
+    &__workSpace {
+        margin-right: 100px;
+    }
+
+    &-workSpace {
+        &__user {
+            flex: 1;
+        }
+        &__password {
+            flex: 1;
+        }
+        &__row {
+            flex-direction: column;
+        }
+
+    }
+
+
+
+}

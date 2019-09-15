@@ -1,0 +1,45 @@
+<!-- <p>login works!</p> -->
+
+<!-- 登录组件 -->
+<div class="container-fluid my-login__wrap">
+    <img class="my-login-bg__img" [src]="imgUrl" alt="" [width]="imgWidth" [height]="imgHeight" [style.left]="moveLeft">
+    <!-- <img class="my-login-bg__img" [src]="imgUrl" alt="" width="1089" height="680" [style.left]="moveLeft"> -->
+    <!-- 登录区域 -->
+
+    <p-card class="my-login__workSpace" styleClass="my-login__Card">
+        <form (ngSubmit)="onSubmit(loginForm)" #loginForm="ngForm" novalidate class="needs-validation"
+            [ngClass]="{'was-validated': checkForm}">
+
+            <div class="row form-group">
+                <div class="col  my-login-workSpace__row">
+                    <div class="ui-inputgroup">
+                        <span class="ui-inputgroup-addon"><i class="pi pi-user"></i></span>
+                        <input class="my-login-workSpace__user form-control" type="text" pInputText
+                            placeholder="Username" [(ngModel)]="username" name="username" required
+                            #loginUsername="ngModel" />
+                    </div>
+
+                    <div class="invalid-feedback" [ngClass]="{'my-display-block': !loginUsername.valid}">
+                        用户名不能为空
+                    </div>
+
+                </div>
+            </div>
+            <div class="row form-group">
+                <div class="col my-login-workSpace__row">
+                    <div class="ui-inputgroup">
+                        <span class="ui-inputgroup-addon"><i class="pi pi-lock"></i></span>
+                        <input class="my-login-workSpace__password form-control" type="password" placeholder="请输入密码"
+                            [(ngModel)]="password" pPassword name="password" #loginPass="ngModel" required />
+                    </div>
+                    <div class="invalid-feedback" [ngClass]="{'my-display-block': !loginUsername.valid}">
+                        密码不能为空
+                    </div>
+
+                </div>
+            </div>
+            <button pButton type="submit" label="Click" (click)="btnClick()"></button>
+        </form>
+    </p-card>
+
+</div>

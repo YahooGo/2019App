@@ -23,7 +23,7 @@ import { LoginService } from './serve/login.service';
   exports: [
     // LoginComponent
   ],
-  providers: [,
+  providers: [
     LoginService
   ]
 })

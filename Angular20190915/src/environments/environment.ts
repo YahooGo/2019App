@@ -5,7 +5,7 @@
 export const environment = {
   production: false,
   info: '【项目级】开发环境',
-  baseUrl: 'localhost:3000',
+  baseUrl: 'http://localhost:3000',
 };
 
 /*

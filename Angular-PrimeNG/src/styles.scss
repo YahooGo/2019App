@@ -90,3 +90,11 @@ app-root {
         }
     }
 }
+
+.my-login__Card {
+    width: 300px;
+    height: 300px;
+    &.ui-card {
+        background-color: rgba(0, 0, 0, 0.5);
+    }
+}

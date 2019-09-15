@@ -1,6 +1,36 @@
 # Angular-PrimeNG
 
 # 设计方案
+Bootstrap + primeNG
+
+## 挂代理
+
+```
+直接执行 npm run link:taobao
+
+ 以下是说明:
+ 淘宝 npm 地址：
+ http://npm.taobao.org/
+
+ 临时使用命令
+ npm --registry https://registry.npm.taobao.org install
+ yarn --registry https://registry.npm.taobao.org install
+ 设置成永久配置
+ npm config set registry https://registry.npm.taobao.org
+
+ 验证安装成功：
+ npm config get registry
+ 安装成功会输出: https://registry.npm.taobao.org
+ 或者 用 npm info express 应该也可以查看
+```
+
+## 模拟数据服务
+> 使用json-server 工具
+
+安装： 安装指令`yarn add json-server`
+创建： 创建db.json文件用于定义mock数据
+配置： 配置package.json 命令内部启动json-server 
+运行： 运行指令`json-server --watch db.json`
 
 ## Modules 
 用于存放页面级别组件

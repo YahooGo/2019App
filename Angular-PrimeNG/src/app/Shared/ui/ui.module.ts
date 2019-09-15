@@ -7,6 +7,7 @@ import { PanelMenuModule } from 'primeng/panelmenu';
 import { CardModule } from 'primeng/card';
 import { ScrollPanelModule } from 'primeng/scrollpanel';
 import { SidebarModule } from 'primeng/sidebar';
+import { PasswordModule } from 'primeng/password';
 
 @NgModule({
   declarations: [],
@@ -18,6 +19,7 @@ import { SidebarModule } from 'primeng/sidebar';
     CardModule,
     ScrollPanelModule,
     SidebarModule,
+    PasswordModule,
   ],
   exports: [
     MenubarModule,
@@ -27,6 +29,7 @@ import { SidebarModule } from 'primeng/sidebar';
     CardModule,
     ScrollPanelModule,
     SidebarModule,
+    PasswordModule,
   ]
 })
 export class UiModule { }

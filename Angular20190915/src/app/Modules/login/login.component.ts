@@ -96,21 +96,6 @@ export class LoginComponent implements OnInit, OnDestroy {
     );
   }
 
-  testBtn() {
-    this.loginService.login().subscribe(
-      res => {
-        console.log(res);
-        this.checkForm = false;
-      },
-      err => {
-        console.log('函数级错误 => ', err);
-      },
-      () => {
-        console.log('完成');
-      }
-    );
-  }
-
 }
 
 

@@ -18,8 +18,11 @@ import { environment } from '../../environments/environment';
   providers: [
     {
       provide: 'APP_CONFIG', useFactory: () => {
-        if (environment) {
+        if (!environment.production) {
           return environment.baseUrl;
+        } else {
+          console.log('这是生产环境');
+          return;
         }
       }
     }

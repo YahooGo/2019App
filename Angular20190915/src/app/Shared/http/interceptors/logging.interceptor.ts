@@ -1,10 +1,10 @@
 import { Injectable } from '@angular/core';
 import {
-    HttpEvent, HttpInterceptor, HttpHandler, HttpRequest, HttpErrorResponse
+    HttpEvent, HttpInterceptor, HttpHandler, HttpRequest, HttpErrorResponse, HttpResponse
 } from '@angular/common/http';
 
 import { Observable, throwError } from 'rxjs';
-import { catchError, retry } from 'rxjs/operators';
+import { catchError, retry, tap, finalize } from 'rxjs/operators';
 
 /** Pass untouched request through to the next request handler. */
 @Injectable()
@@ -35,10 +35,28 @@ export class LoggingInterceptor implements HttpInterceptor {
         // 发给拦截器链中的下一个拦截器之前，对该请求进行转换。
         // 拦截器还可以通过为 next.handle() 返回的流添加额外的 RxJS 操作符，
         // 来对响应事件流进行转换。
+        // return next.handle(req)
+        //     .pipe(
+        //         retry(3), // 失败重复请求3次
+        //         catchError(this.handleError)
+        //     );
+        const started = Date.now();
+        let ok: string;
         return next.handle(req)
             .pipe(
-                retry(3), // 失败重复请求3次
-                catchError(this.handleError)
+                tap(
+                    // Succeeds when there is a response; ignore other events
+                    event => ok = event instanceof HttpResponse ? 'succeeded' : '',
+                    // Operation failed; error is an HttpErrorResponse
+                    error => ok = 'failed'
+                ),
+                // Log when response observable either completes or errors
+                finalize(() => {
+                    const elapsed = Date.now() - started;
+                    const msg = `${req.method} "${req.urlWithParams}"
+               ${ok} in ${elapsed} ms.`;
+                    console.log('最终http请求异常信息 => ', msg);
+                })
             );
     }
 

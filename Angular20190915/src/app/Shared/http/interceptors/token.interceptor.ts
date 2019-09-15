@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
 import {
-    HttpEvent, HttpInterceptor, HttpHandler, HttpRequest
+    HttpEvent, HttpInterceptor, HttpHandler, HttpRequest, HttpHeaders
 } from '@angular/common/http';
 
 import { Observable } from 'rxjs';
@@ -19,9 +19,18 @@ export class TokenInterceptor implements HttpInterceptor {
         next: HttpHandler
     ): Observable<HttpEvent<any>> {
 
+        const httpOptions = {
+            headers: new HttpHeaders({
+                'Content-Type': 'application/json',
+                'X-CustomAuthHeader': 'my-auth-token'
+            })
+        };
+
         // 克隆请求体进行头部配置
         const clonedRequest = req.clone({
-            headers: req.headers.set('X-CustomAuthHeader', 'token')
+            // 单个属性写入设置
+            // headers: req.headers.set('X-CustomAuthHeader', 'token')
+            headers: httpOptions.headers
         });
 
         console.log('new headers', clonedRequest.headers.keys());

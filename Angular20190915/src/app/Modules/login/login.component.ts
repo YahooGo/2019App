@@ -82,7 +82,18 @@ export class LoginComponent implements OnInit, OnDestroy {
     // console.log('表单对象=》', data);
 
     this.checkForm = true;
-    this.loginService.login();
+    this.loginService.login().subscribe(
+      res => {
+        console.log(res);
+        this.checkForm = false;
+      },
+      error => {
+        console.log(error);
+      },
+      () => {
+        console.log('完成');
+      }
+    );
   }
 
 

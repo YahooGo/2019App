@@ -19,9 +19,14 @@ import { environment } from '../../environments/environment';
     {
       provide: 'APP_CONFIG', useFactory: () => {
         if (!environment.production) {
+          console.log('******************** START ****************************');
+          console.log(environment.info + '开始运行, 运行开始时间：' + new Date());
+          console.log('********************* END ***************************');
           return environment.baseUrl;
         } else {
-          console.log('这是生产环境');
+          console.log('******************** START ****************************');
+          console.log(environment.info + '开始运行, 运行开始时间：' + new Date());
+          console.log('********************* END ***************************');
           return;
         }
       }

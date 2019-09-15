@@ -4,7 +4,8 @@
 
 export const environment = {
   production: false,
-  baseUrl: '开发环境',
+  info: '【项目级】开发环境',
+  baseUrl: 'localhost:3000',
 };
 
 /*

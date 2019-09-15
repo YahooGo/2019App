@@ -1,4 +1,5 @@
 export const environment = {
   production: false,
-  baseUrl: '我的开发环境'
+  info: '【个人级】开发环境',
+  baseUrl: 'localhost:3000'
 };

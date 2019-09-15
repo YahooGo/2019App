@@ -1,4 +1,5 @@
 export const environment = {
   production: false,
-  baseUrl: '测试环境'
+  info: '【测试专用】开发环境',
+  baseUrl: 'localhost:3000'
 };

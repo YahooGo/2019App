@@ -1,4 +1,5 @@
 export const environment = {
   production: true,
-  baseUrl: '生产环境',
+  info: '生产环境不容变更',
+  baseUrl: 'localhost:3000',
 };

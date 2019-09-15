@@ -12,14 +12,16 @@ import { UiModule } from 'src/app/Shared/ui/ui.module';
 import { LoginService } from './serve/login.service';
 
 @NgModule({
-  declarations: [LoginComponent],
+  declarations: [
+    LoginComponent
+  ],
   imports: [
     LoginRoutingModule,
     SharedModule,
     UiModule
   ],
   exports: [
-    LoginComponent
+    // LoginComponent
   ],
   providers: [,
     LoginService

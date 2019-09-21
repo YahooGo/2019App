@@ -104,7 +104,7 @@
     "@angular-devkit/core" "8.2.2"
     rxjs "6.4.0"
 
-"@angular/animations@~8.2.0":
+"@angular/animations@^8.2.7":
   version "8.2.7"
   resolved "https://registry.npm.taobao.org/@angular/animations/download/@angular/animations-8.2.7.tgz#643b673e705eb10f9a0f7199de0498d635d2314c"
   integrity sha1-ZDtnPnBesQ+aD3GZ3gSY1jXSMUw=
@@ -5094,6 +5094,16 @@ prepend-http@^1.0.0:
   version "1.0.4"
   resolved "https://registry.npm.taobao.org/prepend-http/download/prepend-http-1.0.4.tgz#d4f4562b0ce3696e41ac52d0e002e57a635dc6dc"
   integrity sha1-1PRWKwzjaW5BrFLQ4ALlemNdxtw=
+
+primeicons@^2.0.0:
+  version "2.0.0"
+  resolved "https://registry.npm.taobao.org/primeicons/download/primeicons-2.0.0.tgz#ec3e5a8d4d04a09309225a5a57deb911e08dc0d3"
+  integrity sha1-7D5ajU0EoJMJIlpaV965EeCNwNM=
+
+primeng@^8.0.3:
+  version "8.0.3"
+  resolved "https://registry.npm.taobao.org/primeng/download/primeng-8.0.3.tgz#f13d9fdc85d1678250efa1864272c7d6dc36fa17"
+  integrity sha1-8T2f3IXRZ4JQ76GGQnLH1tw2+hc=
 
 process-nextick-args@~2.0.0:
   version "2.0.1"

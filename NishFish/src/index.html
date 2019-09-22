@@ -1,5 +1,6 @@
 <!doctype html>
 <html lang="en">
+
 <head>
   <meta charset="utf-8">
   <title>NishFish</title>
@@ -7,8 +8,104 @@
 
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="icon" type="image/x-icon" href="favicon.ico">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+  <style type="text/css">
+    /* Loading 动画 */
+    html,
+    body,
+    app-root {
+      height: 100%;
+      margin: 0;
+
+    }
+
+    .my-index-screen {
+      background-color: #04091e;
+      position: relative;
+      height: 100%;
+      width: 100%;
+
+    }
+
+    .my-index-logo {
+      position: absolute;
+      left: 50%;
+      top: 50%;
+      width: 50px;
+      height: 50px;
+      margin-left: -25px;
+      margin-top: -25px;
+      z-index: 2;
+      text-align: center;
+      color: #ffffff;
+      line-height: 46px;
+      font-size: 32px;
+      display: block;
+    }
+
+    .my-index-loader,
+    .my-index-loader::before,
+    .my-index-loader::after {
+      left: 50%;
+      top: 50%;
+      margin-left: -50px;
+      margin-top: -50px;
+      position: absolute;
+      vertical-align: middle;
+      background: #f6214b;
+      width: 100px;
+      height: 100px;
+      border-radius: 50%;
+      z-index: 1;
+    }
+
+    .my-index-loader::before {
+      content: "";
+      animation: bounce 1.5s infinite;
+    }
+
+    .my-index-loader::after {
+      content: "";
+      animation: bounce 1.5s -0.4s infinite;
+    }
+
+    @keyframes bounce {
+      0% {
+        transform: scale(0.8);
+        -webkit-transform: scale(0.8);
+        opacity: 1;
+      }
+
+      100% {
+        transform: scale(2);
+        -webkit-transform: scale(2);
+        opacity: 0;
+      }
+    }
+
+    @-webkit-keyframes bounce {
+      0% {
+        transform: scale(0.8);
+        -webkit-transform: scale(0.8);
+        opacity: 1;
+      }
+
+      100% {
+        transform: scale(2);
+        -webkit-transform: scale(2);
+        opacity: 0;
+      }
+    }
+  </style>
 </head>
+
 <body>
-  <app-root></app-root>
+  <app-root>
+    <div class="my-index-screen">
+      <div class="my-index-loader"></div>
+      <div class="my-index-logo">秦</div>
+    </div>
+  </app-root>
 </body>
+
 </html>

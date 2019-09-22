@@ -1,0 +1,39 @@
+<!-- page 首页 -->
+<!-- 底部导航 -->
+<nav class="navbar fixed-top navbar-expand-sm navbar-light bg-light">
+    <!-- logo区域 -->
+    <a class="navbar-brand" href="#">
+        <img src="https://gss0.baidu.com/9fo3dSag_xI4khGko9WTAnF6hhy/zhidao/wh%3D600%2C800/sign=c287a145bc315c6043c063e9bd81e72b/c8ea15ce36d3d539947902933a87e950352ab01d.jpg"
+            width="100" height="50" alt="">
+    </a>
+    <button class="navbar-toggler" type="button" (click)="onMenuToggle()">
+        <span class="navbar-toggler-icon" #MenuBtn></span>
+    </button>
+    <!-- 导航区域 -->
+    <div class="collapse navbar-collapse" [ngClass]="{'show': MenuShow}">
+        <ul class="navbar-nav ml-auto my-header" (click)="onMenuToggle()">
+            <li class="nav-item">
+                <button type="text" class="my-menu-button btn-color-black" pButton icon="pi pi-search"></button>
+            </li>
+            <li class="nav-item">
+                <button type="text" class="my-menu-button btn-color-blue" (click)="display = true" pButton
+                    icon="pi pi-align-justify"></button>
+            </li>
+            <li class="nav-item">
+                <button type="text" class="my-menu-button btn-color-red" (click)="display2 = true" pButton
+                    icon="pi pi-cog"></button>
+            </li>
+        </ul>
+    </div>
+</nav>
+
+<!-- 侧边栏 -->
+<p-sidebar [(visible)]="display" [baseZIndex]="100" [showCloseIcon]="false">
+    菜单区域
+</p-sidebar>
+<p-sidebar [(visible)]="display2" [baseZIndex]="100" [showCloseIcon]="false" position="right">
+    系统配置区域
+</p-sidebar>
+<!-- 主体内容区域 -->
+
+<!-- 底部区域 -->

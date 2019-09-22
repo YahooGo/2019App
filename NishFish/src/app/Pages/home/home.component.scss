@@ -1,0 +1,17 @@
+.my-header {
+    .my-menu-button {
+        background: none;
+        border: none;
+    }
+    .btn-color {
+        &-blue {
+            color: #007ad9;
+        }
+        &-red {
+            color: #df587e
+        }
+        &-black {
+            color: #fd7e14
+        }
+    }
+}

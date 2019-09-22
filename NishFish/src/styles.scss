@@ -1,1 +1,40 @@
 /* You can add global styles to this file, and also import other style files */
+
+@import "~primeng/resources/primeng.min.css";
+@import "~primeicons/primeicons.css";
+@import "~primeng/resources/themes/nova-light/theme.css";
+
+
+
+
+a.ui-panelmenu-header-link {
+    outline: none !important;
+}
+.my-sidebar-menu.ui-sidebar {
+    padding: 0 !important;
+    border: none;
+
+    .ui-panelmenu  {
+        & .ui-panelmenu-content {
+            border: none; 
+        }
+    
+        & .ui-panelmenu-panel {
+            margin: 0;
+        }
+
+        & .ui-panelmenu-header   {
+            .ui-panelmenu-header-link {
+                border: 1px solid #f4f4f4;
+            }
+            &.ui-state-active {
+                .ui-panelmenu-header-link {
+                    border: 1px solid #007ad9 ;
+                }
+            }
+        }
+
+    }
+   
+}
+

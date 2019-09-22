@@ -29,13 +29,15 @@
 
 
 <!-- 主体内容区域 -->
-
+<button pButton type="button" label="Click"></button>
 <!-- 底部区域 -->
 
 <!-- 功能区域 =》侧边栏 -->
-<p-sidebar [(visible)]="display" [baseZIndex]="100" [showCloseIcon]="false">
-    菜单区域
+<p-sidebar [(visible)]="display" styleClass="my-sidebar-menu" [baseZIndex]="100" [showCloseIcon]="false">
+    <!-- 菜单区域 -->
+
+    <p-panelMenu [model]="MenuData" [style]="{'width':'auto'}"></p-panelMenu>
 </p-sidebar>
-<p-sidebar [(visible)]="display2" [baseZIndex]="100" [showCloseIcon]="false" position="right">
+<p-sidebar [(visible)]=" display2" [baseZIndex]="100" [showCloseIcon]="false" position="right">
     系统配置区域
 </p-sidebar>

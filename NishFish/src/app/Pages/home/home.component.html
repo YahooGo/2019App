@@ -6,38 +6,51 @@
         <img src="https://gss0.baidu.com/9fo3dSag_xI4khGko9WTAnF6hhy/zhidao/wh%3D600%2C800/sign=c287a145bc315c6043c063e9bd81e72b/c8ea15ce36d3d539947902933a87e950352ab01d.jpg"
             width="100" height="50" alt="">
     </a>
-    <button class="navbar-toggler" type="button" (click)="onMenuToggle()">
+    <button class="navbar-toggler" type="button" (click)="onMenuToggle($event)">
         <span class="navbar-toggler-icon" #MenuBtn></span>
     </button>
     <!-- 导航区域 -->
     <div class="collapse navbar-collapse" [ngClass]="{'show': MenuShow}">
-        <ul class="navbar-nav ml-auto my-header" (click)="onMenuToggle()">
+        <ul class="navbar-nav ml-auto my-header">
             <li class="nav-item">
                 <button type="text" class="my-menu-button btn-color-black" pButton icon="pi pi-search"></button>
             </li>
             <li class="nav-item">
-                <button type="text" class="my-menu-button btn-color-blue" (click)="display = true" pButton
+                <button type="text" class="my-menu-button btn-color-blue" (click)="onMenuToggle($event)" pButton
                     icon="pi pi-align-justify"></button>
             </li>
             <li class="nav-item">
-                <button type="text" class="my-menu-button btn-color-red" (click)="display2 = true" pButton
+                <button type="text" class="my-menu-button btn-color-red" (click)="onPageConfigChange($event)" pButton
                     icon="pi pi-cog"></button>
             </li>
         </ul>
     </div>
 </nav>
 
-
 <!-- 主体内容区域 -->
-<button pButton type="button" label="Click"></button>
+<div class="container main-container">
+    <router-outlet></router-outlet>
+</div>
 <!-- 底部区域 -->
+<div class="footer">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <p>
+                    Powered by <a href="http://www.baidu.com" target="_blank">NiceFish</a>
+                </p>
+            </div>
+        </div>
+
+    </div>
+</div>
 
 <!-- 功能区域 =》侧边栏 -->
-<p-sidebar [(visible)]="display" styleClass="my-sidebar-menu" [baseZIndex]="100" [showCloseIcon]="false">
+<p-sidebar [(visible)]="MenuShow" styleClass="my-sidebar-menu" [baseZIndex]="100" [showCloseIcon]="false">
     <!-- 菜单区域 -->
 
-    <p-panelMenu [model]="MenuData" [style]="{'width':'auto'}"></p-panelMenu>
+    <p-panelMenu [multiple]="false" [model]="MenuData" [style]="{'width':'auto'}"></p-panelMenu>
 </p-sidebar>
-<p-sidebar [(visible)]=" display2" [baseZIndex]="100" [showCloseIcon]="false" position="right">
+<p-sidebar [(visible)]="PageConfig" [baseZIndex]="100" [showCloseIcon]="false" position="right">
     系统配置区域
 </p-sidebar>

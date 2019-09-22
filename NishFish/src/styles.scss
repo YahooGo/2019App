@@ -5,7 +5,10 @@
 @import "~primeng/resources/themes/nova-light/theme.css";
 
 
-
+app-root {
+    display: flex;
+    flex-direction: column;
+}
 
 a.ui-panelmenu-header-link {
     outline: none !important;

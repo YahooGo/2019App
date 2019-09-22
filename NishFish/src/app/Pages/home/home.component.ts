@@ -10,6 +10,7 @@ import { MenuItem } from 'primeng/api';
 export class HomeComponent implements OnInit {
   @ViewChild('MenuBtn', { static: false }) MenuBtn: ElementRef;
   public MenuShow = false;
+  public PageConfig = false;
   public MenuData: MenuItem[];
 
 
@@ -18,17 +19,19 @@ export class HomeComponent implements OnInit {
   ngOnInit() {
     this.MenuData = [
       {
-        label: 'File',
-        items: [{
-          label: 'New',
-          icon: 'pi pi-fw pi-plus',
-          items: [
-            { label: 'Project' },
-            { label: 'Other' },
-          ]
-        },
-        { label: 'Open' },
-        { label: 'Quit' }
+        label: 'sign',
+        icon: 'pi pi-fw pi-pencil',
+        items: [
+          {
+            label: 'SignIn', icon: 'pi pi-fw pi-trash', routerLink: ['/login'], command: () => {
+              this.MenuShow = !this.MenuShow;
+            }
+          },
+          {
+            label: 'SignUp', icon: 'pi pi-fw pi-refresh', routerLink: ['/logout'], command: () => {
+              this.MenuShow = !this.MenuShow;
+            }
+          }
         ]
       },
       {
@@ -42,8 +45,14 @@ export class HomeComponent implements OnInit {
     ];
   }
 
-  onMenuToggle(): void {
+  onMenuToggle(ev): void {
+    ev.stopPropagation();
     this.MenuShow = !this.MenuShow;
+  }
+
+  onPageConfigChange(ev): void {
+    ev.stopPropagation();
+    this.PageConfig = !this.PageConfig;
   }
 
 }

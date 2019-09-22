@@ -8,8 +8,14 @@ import { SidebarModule } from 'primeng/sidebar';
 import { MenuModule } from 'primeng/menu';
 import { PanelMenuModule } from 'primeng/panelmenu';
 
+import { SignInComponent } from '../blog/user/sign-in/sign-in.component';
+import { SignUpComponent } from '../blog/user/sign-up/sign-up.component';
+
 @NgModule({
-  declarations: [],
+  declarations: [
+    SignInComponent,
+    SignUpComponent
+  ],
   imports: [
     CommonModule,
     MenubarModule,

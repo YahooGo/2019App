@@ -2,6 +2,7 @@ import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 
 import { FormsModule } from '@angular/forms';
+import { HttpClientModule } from '@angular/common/http';
 
 import { MenubarModule } from 'primeng/menubar';
 import { TieredMenuModule } from 'primeng/tieredmenu';
@@ -29,6 +30,7 @@ import { SignUpComponent } from '../blog/user/sign-up/sign-up.component';
     MenuModule,
     PanelMenuModule,
     PanelModule,
+    HttpClientModule,
   ],
   exports: [
     CommonModule,
@@ -40,6 +42,7 @@ import { SignUpComponent } from '../blog/user/sign-up/sign-up.component';
     MenuModule,
     PanelMenuModule,
     PanelModule,
+    HttpClientModule,
   ]
 })
 export class SharedModule { }

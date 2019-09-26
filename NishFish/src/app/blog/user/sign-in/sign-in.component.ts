@@ -1,10 +1,14 @@
 import { Component, OnInit } from '@angular/core';
 import { Router, ActivatedRoute, ActivatedRouteSnapshot, RouterState, RouterStateSnapshot } from '@angular/router';
+import { fadeIn } from '../../../shared/animations/fadeIn';
+import { flyIn } from '../../../shared/animations/flyIn';
+import { UserService } from '../services/user.service';
 
 @Component({
   selector: 'app-sign-in',
   templateUrl: './sign-in.component.html',
-  styleUrls: ['./sign-in.component.scss']
+  styleUrls: ['./sign-in.component.scss'],
+  animations: [fadeIn, flyIn]
 })
 export class SignInComponent implements OnInit {
 
@@ -18,6 +22,7 @@ export class SignInComponent implements OnInit {
   constructor(
     public router: Router,
     public activatedRoute: ActivatedRoute,
+    private US: UserService
   ) { }
 
   ngOnInit() {
@@ -38,8 +43,12 @@ export class SignInComponent implements OnInit {
   doLogin(data): void {
     console.log(data.form);
     if (data.form.status === 'VALID') {
-      console.log(this.userInfo);
-      console.log(data);
+      // console.log(this.userInfo);
+      // console.log(data);
+
+      this.US.login(this.userInfo);
+
+
       this.router.navigateByUrl('/home');
     }
 

@@ -1,5 +1,16 @@
 # NishFish
 
+
+## 模拟数据服务
+> 使用json-server 工具
+
+安装： 安装指令`yarn add json-server`
+创建： 创建db.json文件用于定义mock数据
+配置： 配置package.json 命令内部启动json-server 
+运行： 运行指令`json-server --watch db.json`
+
+
+
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 8.2.0.
 
 ## Development server

@@ -3,12 +3,14 @@ import { HttpClient } from '@angular/common/http';
 import { Subject, pipe } from 'rxjs';
 import { tap, retry } from 'rxjs/operators';
 
+import { environment } from '../../../../environments/environment';
+
 @Injectable({
   providedIn: 'root'
 })
 export class UserService {
 
-  public userLoginUrl = ' http://localhost:3000/user';
+  public userLoginUrl = environment.userLoginUrl;
   public subject: Subject<any> = new Subject<any>();
 
   constructor(

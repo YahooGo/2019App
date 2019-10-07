@@ -1,3 +1,6 @@
 <!--The content below is only a placeholder and can be replaced.-->
-<app-scrollable-tab></app-scrollable-tab>
-<router-outlet></router-outlet>
+
+<!-- <router-outlet></router-outlet> -->
+<!-- 头部导航 -->
+<app-scrollable-tab [Options]="tabScrollOptions" [menus]="TopMenu" (tabSelected)="handleTabSelected($event)">
+</app-scrollable-tab>

@@ -4,10 +4,15 @@ ul {
     margin: 0;
     display: flex;
     flex-direction: row;
+    justify-content: space-between;
 }
 
 ul li {
-    display: inline-block;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    white-space: nowrap;
     margin: 0 5px;
     padding: 0;
 }
@@ -27,3 +32,16 @@ a {
     color: red;
 }
 
+.indicator {
+    height: 2px;
+    width: 2rem;
+    margin-top: 2px;
+}
+
+.even{
+    font-weight: 900;
+}
+
+.odd {
+    font-weight: 100;
+}

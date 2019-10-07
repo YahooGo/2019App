@@ -1,0 +1,6 @@
+<ul>
+    <li *ngFor="let menu of menus; let i = index;let first = first">
+        <a href="#" [class.first]="first" [class.active]="i === selectIndex"
+            (click)="handleSelection(i)">{{menu.title}}</a>
+    </li>
+</ul>

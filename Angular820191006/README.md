@@ -1,5 +1,26 @@
 # Angular820191006
 
+## 系统学习Angular第一天
+
+> 创建组件： `ng g c components/MyComponentName`
+在组件内新建文件index.ts 导出组件所有内容以减少路径引用每级文件都有
+
+> 指令ngFor循环 指令ngIf
+
+```
+<div *ngIf="条件判断" else elseContent>
+条件判断为真时显示
+</div>
+<ng-template #elseContent>
+条件为假时显示
+</ng-template>
+```
+
+
+
+
+
+
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 8.2.0.
 
 ## Development server

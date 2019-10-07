@@ -1,0 +1,29 @@
+
+ul {
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: row;
+}
+
+ul li {
+    display: inline-block;
+    margin: 0 5px;
+    padding: 0;
+}
+
+a {
+    text-decoration: none;
+}
+
+::-webkit-scrollbar {
+    display: none;
+}
+.first {
+    color: green;
+}
+
+.active {
+    color: red;
+}
+

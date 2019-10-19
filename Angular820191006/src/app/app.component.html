@@ -2,5 +2,9 @@
 
 <!-- <router-outlet></router-outlet> -->
 <!-- 头部导航 -->
-<app-scrollable-tab [Options]="tabScrollOptions" [menus]="TopMenu" (tabSelected)="handleTabSelected($event)">
-</app-scrollable-tab>
+<!-- <app-scrollable-tab [Options]="tabScrollOptions" [menus]="TopMenu" (tabSelected)="handleTabSelected($event)">
+</app-scrollable-tab> -->
+
+<app-image-slider [sliders]="imageSliders" #imageSlider></app-image-slider>
+
+<a href="#" (click)="handleChange()">aaaa</a>

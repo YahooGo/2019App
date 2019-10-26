@@ -156,3 +156,6 @@ exportt class AppComponent {
   3. 服务
   4. 管道
   5. 指令
+
+  ## 命令
+  > 创建模块携带路由 `ng g m 模块名 --routing`

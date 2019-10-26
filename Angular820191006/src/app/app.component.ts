@@ -1,5 +1,5 @@
 import { Component, ViewChild, OnInit, AfterViewInit } from '@angular/core';
-import { TopMenu, Options, ImageSlider, ImageSliderComponent } from './Components';
+import { TopMenu, Options, ImageSlider, ImageSliderComponent } from './shared/Components';
 import { interval } from 'rxjs';
 import { map, scan, startWith } from 'rxjs/operators';
 

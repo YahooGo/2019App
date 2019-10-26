@@ -91,8 +91,68 @@ exportt class AppComponent {
 
 ```
 
+## 双向绑定
+```
+<input [value]="username" (input)="username = $event.target.value">
+```
+- 属性绑定 `[value] = "username"` -- 绑定 `username` 值到 `value` 中
+- 事件绑定 `(click) = "表达式"` -- 绑定表达式到 `click` 事件上
+- `username = $event.target.value` -- 在input事件触发时执行
+- `$event` -- 表达式， 提供事件的数据
 
+> ngModel 
+```
+// 1. 依赖FormsModule中提供的指令 
+// 2. 使用[(ngModel)] = "变量" 形式进行双向绑定
+// 3. 其实是一个语法糖
+// 4. [(ngModel)] = "username" (ngModelChange)="username = $event"
+```
 
+## 什么是模块
 
+`模块就是提供相对独立功能的一组代码`
+- 模块的组成部分可以有： 组件、服务、指令、管道等。
+- 从某种角度，它就像一个小型应用。
+```
+1. declarations 数组：模块拥有的组件、指令或管道。【注意】每个组件、指令、管道只能在一个模块中声明。
+2. providers 数组： 模块中需要使用的服务
+3. exports 数组：暴露给其他模块使用的组件、指令或管道等。
+4. imports 数组： 导入本模块需要的依赖模块 【注意】仅是模块。
+```
 
+## 模块的使用标准
+> 导入其它模块时，需要知道使用该模块的目的
 
+- 如果是组件，那么需要在`每一个`需要`模块`中进行导入
+- 如果是服务，那么一般来是在`根模块`中导入`一次`即可 `服务依赖注入`
+
+> 需要在每个需要的模块中进行导入的
+
+- CommonModule： 提供绑定，`*ngIf` 和 `*ngFor`等基础指令，基本每个模块都需要
+- FormsModule/ReactiveFormsModule: 表单模块需要在每个需要的模块导入
+- 提供组件、指令或管道的模块 需要在每个需要的模块导入
+
+> 只在根模块导入一次的
+- HttpClientModule/BrowserAnimationsModule/NoopAnimationsModule
+- 只提供服务的模块
+
+***注意***
+> 模块只会被导入一次，重复导入不存在。
+> Angular 不允许模块之间出现循环依赖
+
+## 如何有效的组织模块
+
+- 共享模块 `SharedModule`
+ 1. 公用组件
+ 2. 公用指令
+ 3. 公用管道
+- 根模块
+  1. 根路由模块
+  2. 根组件
+  3. 公用服务
+- 子模块
+  1. 子模块路由模块
+  2. 组件
+  3. 服务
+  4. 管道
+  5. 指令

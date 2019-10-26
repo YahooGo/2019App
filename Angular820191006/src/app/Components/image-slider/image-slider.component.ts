@@ -1,4 +1,15 @@
-import { Component, OnInit, Input, ViewChild, ElementRef, ViewChildren, QueryList, AfterViewInit, Renderer2, OnDestroy } from '@angular/core';
+import {
+  Component,
+  OnInit,
+  Input,
+  ViewChild,
+  ElementRef,
+  ViewChildren,
+  QueryList,
+  AfterViewInit,
+  Renderer2,
+  OnDestroy
+} from '@angular/core';
 
 /**
  * ## 轮播图图片属性

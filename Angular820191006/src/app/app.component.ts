@@ -108,6 +108,8 @@ export class AppComponent implements OnInit, AfterViewInit {
     indicatorColor: 'green',
   };
 
+  username: string = '';
+
   /**
    * 处理滚动导航点击事件
    * @param tabMenu 当前点击滚动导航对象

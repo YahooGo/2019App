@@ -157,5 +157,22 @@ exportt class AppComponent {
   4. 管道
   5. 指令
 
-  ## 命令
-  > 创建模块携带路由 `ng g m 模块名 --routing`
+## 命令
+> 创建模块携带路由 `ng g m 模块名 --routing`
+
+
+## 什么是注解(注解)
+
+> 装饰器/注解就是一个函数 但是它是一个返回函数的函数。
+它是TS特性，非Angular独有。
+
+## 指令
+1. 组件 带模板的指令
+2. 结构型指令 改变宿主文档结构 eg: `ngIf`, `ngFor`, `ngSwitch`
+3. 属性型指令 改变宿主行为 eg: `ngClass`, `ngStyle`, `ngModel`
+
+
+
+
+
+

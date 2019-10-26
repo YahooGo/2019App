@@ -1,4 +1,5 @@
 import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
+import { Emoki, confirmable } from '../../Decorators';
 
 @Component({
   selector: 'app-horizontal-grid',
@@ -6,6 +7,10 @@ import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
   styleUrls: ['./horizontal-grid.component.scss']
 })
 export class HorizontalGridComponent implements OnInit {
+  /**
+   * 自定义装饰器
+   */
+  @Emoki() result: string = 'www';
 
   private UserName: string = '';
   /**
@@ -33,6 +38,9 @@ export class HorizontalGridComponent implements OnInit {
 
   ngOnInit() {
   }
-
+  @confirmable('点击执行message')
+  handleClick() {
+    console.log('点击执行');
+  }
 
 }

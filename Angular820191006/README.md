@@ -171,7 +171,7 @@ exportt class AppComponent {
 2. 结构型指令 改变宿主文档结构 eg: `ngIf`, `ngFor`, `ngSwitch`
 3. 属性型指令 改变宿主行为 eg: `ngClass`, `ngStyle`, `ngModel`
 
-
+**[注意]指令本身没有模板需要寄宿在模板上成为模板的属性**
 
 
 

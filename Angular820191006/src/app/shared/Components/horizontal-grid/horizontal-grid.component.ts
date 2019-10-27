@@ -1,12 +1,48 @@
 import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
 import { Emoki, confirmable } from '../../Decorators';
 
+export interface Channel {
+  title: string;
+  id: number;
+  link: string;
+  icon: string;
+  alt?: string;
+}
+
+
 @Component({
   selector: 'app-horizontal-grid',
   templateUrl: './horizontal-grid.component.html',
   styleUrls: ['./horizontal-grid.component.scss']
 })
 export class HorizontalGridComponent implements OnInit {
+
+
+  channels: Channel[] = [
+    {
+      title: '百度',
+      alt: '百度icon',
+      id: 1,
+      link: 'www.baidu.com',
+      icon: 'https://angular.cn/assets/images/logos/angular/shield-large.svg',
+    },
+    {
+      title: '百度2',
+      id: 2,
+      alt: '百度icon',
+      link: 'www.baidu.com',
+      icon: 'https://angular.cn/assets/images/logos/angular/shield-large.svg',
+
+    },
+    {
+      title: '百度3',
+      id: 3,
+      alt: '百度icon',
+      link: 'www.baidu.com',
+      icon: 'https://angular.cn/assets/images/logos/angular/shield-large.svg',
+    }
+  ];
+
   /**
    * 自定义装饰器
    */

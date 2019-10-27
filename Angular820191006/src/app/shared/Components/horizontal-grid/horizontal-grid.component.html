@@ -1,8 +1,10 @@
-<!-- <input type="text" [value]="username" (input)="username = $event.target.value"> -->
-<!-- <input type="text" [(ngModel)]="username"> -->
+<!-- <input type="text" [value]="username" (input)="username = $event.target.value">
+<input type="text" [(ngModel)]="username">
 <input type="text" [value]="username" (input)="username = $event.target.value">
-
-<!-- <input type="text" > -->
-<span>你好, {{username}}</span>
-
 <span (click)="handleClick()">{{result}}</span>
+<span>你好, {{username}}</span> -->
+<!-- 指令没有模板 指令需要寄宿在Html模板之上 -->
+<div appGridItem *ngFor="let item of channels">
+    <img [src]="item.icon" [alt]="item.alt" [appGridItemImage]="'4rem'" [fitMode]="'none'">
+    <span appGridItemTitle>{{item.title}}</span>
+</div>

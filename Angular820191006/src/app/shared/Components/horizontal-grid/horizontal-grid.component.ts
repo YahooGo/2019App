@@ -17,32 +17,6 @@ export interface Channel {
 })
 export class HorizontalGridComponent implements OnInit {
 
-
-  channels: Channel[] = [
-    {
-      title: '百度',
-      alt: '百度icon',
-      id: 1,
-      link: 'www.baidu.com',
-      icon: 'https://angular.cn/assets/images/logos/angular/shield-large.svg',
-    },
-    {
-      title: '百度2',
-      id: 2,
-      alt: '百度icon',
-      link: 'www.baidu.com',
-      icon: 'https://angular.cn/assets/images/logos/angular/shield-large.svg',
-
-    },
-    {
-      title: '百度3',
-      id: 3,
-      alt: '百度icon',
-      link: 'www.baidu.com',
-      icon: 'https://angular.cn/assets/images/logos/angular/shield-large.svg',
-    }
-  ];
-
   /**
    * 自定义装饰器
    */

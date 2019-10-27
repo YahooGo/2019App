@@ -1,5 +1,5 @@
 import { Component, ViewChild, OnInit, AfterViewInit } from '@angular/core';
-import { TopMenu, Options, ImageSlider, ImageSliderComponent } from './shared/Components';
+import { TopMenu, Options, ImageSlider, ImageSliderComponent, Channel } from './shared/Components';
 import { interval } from 'rxjs';
 import { map, scan, startWith } from 'rxjs/operators';
 
@@ -10,6 +10,73 @@ import { map, scan, startWith } from 'rxjs/operators';
 })
 export class AppComponent implements OnInit, AfterViewInit {
   title = 'App';
+
+  channels: Channel[] = [
+    {
+      title: '百度',
+      alt: '百度icon',
+      id: 1,
+      link: 'www.baidu.com',
+      icon: 'https://angular.cn/assets/images/logos/angular/shield-large.svg',
+    },
+    {
+      title: '百度2',
+      id: 2,
+      alt: '百度icon',
+      link: 'www.baidu.com',
+      icon: 'https://angular.cn/assets/images/logos/angular/shield-large.svg',
+
+    },
+    {
+      title: '百度3',
+      id: 3,
+      alt: '百度icon',
+      link: 'www.baidu.com',
+      icon: 'https://angular.cn/assets/images/logos/angular/shield-large.svg',
+    },
+    {
+      title: '百度3',
+      id: 3,
+      alt: '百度icon',
+      link: 'www.baidu.com',
+      icon: 'https://angular.cn/assets/images/logos/angular/shield-large.svg',
+    },
+    {
+      title: '百度3',
+      id: 3,
+      alt: '百度icon',
+      link: 'www.baidu.com',
+      icon: 'https://angular.cn/assets/images/logos/angular/shield-large.svg',
+    },
+    {
+      title: '百度3',
+      id: 3,
+      alt: '百度icon',
+      link: 'www.baidu.com',
+      icon: 'https://angular.cn/assets/images/logos/angular/shield-large.svg',
+    },
+    {
+      title: '百度3',
+      id: 3,
+      alt: '百度icon',
+      link: 'www.baidu.com',
+      icon: 'https://angular.cn/assets/images/logos/angular/shield-large.svg',
+    },
+    {
+      title: '百度3',
+      id: 3,
+      alt: '百度icon',
+      link: 'www.baidu.com',
+      icon: 'https://angular.cn/assets/images/logos/angular/shield-large.svg',
+    },
+    {
+      title: '百度3',
+      id: 3,
+      alt: '百度icon',
+      link: 'www.baidu.com',
+      icon: 'https://angular.cn/assets/images/logos/angular/shield-large.svg',
+    }
+  ];
 
   // @ViewChild('ImageSlider', { static: false }) imageSlider: ImageSliderComponent;
   @ViewChild(ImageSliderComponent, { static: false }) imageSlider: ImageSliderComponent;

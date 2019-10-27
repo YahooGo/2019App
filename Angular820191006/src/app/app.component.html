@@ -9,6 +9,16 @@
 
 <!-- <a href="#" (click)="handleChange()">aaaa</a> -->
 
-<app-horizontal-grid [(username)]="username"></app-horizontal-grid>
+<app-horizontal-grid [(username)]="username">
+    <span appGridItem *ngFor="let item of channels">
+        <img [src]="item.icon" [alt]="item.alt" [link]="item.link" [appGridItemImage]="'4rem'" [fitMode]="'none'">
+        <span [appGridItemTitle]="'1rem'">{{item.title}}</span>
+    </span>
 
-{{result}}
+    <!--  <div class="showdemo" appGridI tem>
+        <div [appGridItemImage]="'4rem'" [fitMode]="'none'">
+            <div [appGridItemImage]="'3rem'" style="background: red"></div>
+            <span [appGridItemTitle]="'1rem'">demo</span>
+        </div>
+    </div> -->
+</app-horizontal-grid>

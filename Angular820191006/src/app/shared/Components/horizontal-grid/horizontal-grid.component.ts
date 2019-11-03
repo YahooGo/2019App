@@ -44,13 +44,35 @@ export class HorizontalGridComponent implements OnInit {
   @Output()
   usernameChange = new EventEmitter();
 
+  @Input() cols: number = 8;
+  @Input() displayCols: number = 5;
+
+  sliderMargin = '0';
+
   constructor() { }
 
   ngOnInit() {
   }
+
+  public get scrollable(): boolean {
+    return this.cols > this.displayCols;
+  }
+
+  public get templateRows(): string {
+    return `minmax(auto, max-content)`;
+  }
+
+  public get templateColumns(): string {
+    return `repeat(${this.cols}, calc((100vw - ${this.displayCols * 0.4}rem) / ${this.displayCols}))`;
+  }
+
   @confirmable('点击执行message')
   handleClick() {
     console.log('点击执行');
+  }
+
+  handleScroll(ev) {
+    this.sliderMargin = `0 ${100 * ev.target.scrollLeft / ev.target.scrollWidth}%`;
   }
 
 }

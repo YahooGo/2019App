@@ -19,6 +19,7 @@ import {
  * - link: 接口跳转地址
  */
 export interface TopMenu {
+  id: number;
   title: string;
   link?: string;
 }

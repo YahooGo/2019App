@@ -261,3 +261,24 @@ exportt class AppComponent {
 > 使用：modules中导入路由对象 [.forRoot]导入到根路由【根模块中】 [.forChild]导入子路由【子模块中】
 
 > 路径参数 【动态路由】
+>> 配置
+- {
+  path: ':tabLink', component: HomeDetailComponent
+}
+>> 激活
+- <a [routerLink]="{'/home',tab.link, {name: 'val'}}"></a>
+- this.router.navigate(['home', tab.link, {name: 'val'}]);
+
+- <a [routerLink]="['/home']" [queryParams]="{name: 'val'}"></a>
+- this.router.navigate(['home'],{queryParams: {name: val}});
+>> URL
+- http://localhost:4200/home/hot;name=val
+- http://localhost:4200/home?name=val
+
+>> 读取
+- this.route.paramsMap.subscribe(params => {...});
+- this.route.queryParamsMap.subscribe(params => {...});
+
+
+
+

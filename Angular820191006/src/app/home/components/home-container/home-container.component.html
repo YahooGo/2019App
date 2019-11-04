@@ -1,21 +1,5 @@
 <!-- 头部导航 -->
-<!-- <app-scrollable-tab [Options]="tabScrollOptions" [menus]="TopMenu" (tabSelected)="handleTabSelected($event)">
-</app-scrollable-tab> -->
+<app-scrollable-tab [Options]="tabScrollOptions" [menus]="TopMenu" (tabSelected)="handleTabSelected($event)">
+</app-scrollable-tab>
 
-<app-image-slider [sliders]="imageSliders" #imageSlider></app-image-slider>
-
-<!-- <a href="#" (click)="handleChange()">aaaa</a> -->
-
-<app-horizontal-grid [(username)]="username">
-  <span appGridItem *ngFor="let item of channels">
-    <img [src]="item.icon" [alt]="item.alt" [link]="item.link" [appGridItemImage]="'4rem'" [fitMode]="'none'">
-    <span [appGridItemTitle]="'1rem'">{{item.title}}</span>
-  </span>
-
-  <!--  <div class="showdemo" appGridI tem>
-        <div [appGridItemImage]="'4rem'" [fitMode]="'none'">
-            <div [appGridItemImage]="'3rem'" style="background: red"></div>
-            <span [appGridItemTitle]="'1rem'">demo</span>
-        </div>
-    </div> -->
-</app-horizontal-grid>
+<router-outlet></router-outlet>

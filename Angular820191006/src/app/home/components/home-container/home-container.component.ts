@@ -1,5 +1,6 @@
-import { Component, OnInit, ViewChild, AfterContentInit, AfterViewChecked, AfterViewInit } from '@angular/core';
-import { TopMenu, Options, ImageSlider, ImageSliderComponent, Channel } from '../../../shared/Components';
+import { Component, OnInit, AfterContentInit, AfterViewChecked, AfterViewInit } from '@angular/core';
+import { TopMenu, Options } from '../../../shared/Components';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-home-container',
@@ -8,157 +9,62 @@ import { TopMenu, Options, ImageSlider, ImageSliderComponent, Channel } from '..
 })
 export class HomeContainerComponent implements OnInit, AfterViewInit {
 
-  channels: Channel[] = [
-    {
-      title: '百度',
-      alt: '百度icon',
-      id: 1,
-      link: 'www.baidu.com',
-      icon: 'https://angular.cn/assets/images/logos/angular/shield-large.svg',
-    },
-    {
-      title: '百度2',
-      id: 2,
-      alt: '百度icon',
-      link: 'www.baidu.com',
-      icon: 'https://angular.cn/assets/images/logos/angular/shield-large.svg',
-
-    },
-    {
-      title: '百度3',
-      id: 3,
-      alt: '百度icon',
-      link: 'www.baidu.com',
-      icon: 'https://angular.cn/assets/images/logos/angular/shield-large.svg',
-    },
-    {
-      title: '百度3',
-      id: 3,
-      alt: '百度icon',
-      link: 'www.baidu.com',
-      icon: 'https://angular.cn/assets/images/logos/angular/shield-large.svg',
-    },
-    {
-      title: '百度3',
-      id: 3,
-      alt: '百度icon',
-      link: 'www.baidu.com',
-      icon: 'https://angular.cn/assets/images/logos/angular/shield-large.svg',
-    },
-    {
-      title: '百度3',
-      id: 3,
-      alt: '百度icon',
-      link: 'www.baidu.com',
-      icon: 'https://angular.cn/assets/images/logos/angular/shield-large.svg',
-    },
-    {
-      title: '百度3',
-      id: 3,
-      alt: '百度icon',
-      link: 'www.baidu.com',
-      icon: 'https://angular.cn/assets/images/logos/angular/shield-large.svg',
-    },
-    {
-      title: '百度3',
-      id: 3,
-      alt: '百度icon',
-      link: 'www.baidu.com',
-      icon: 'https://angular.cn/assets/images/logos/angular/shield-large.svg',
-    },
-    {
-      title: '百度3',
-      id: 3,
-      alt: '百度icon',
-      link: 'www.baidu.com',
-      icon: 'https://angular.cn/assets/images/logos/angular/shield-large.svg',
-    }
-  ];
-
-  // @ViewChild('ImageSlider', { static: false }) imageSlider: ImageSliderComponent;
-  @ViewChild(ImageSliderComponent, { static: false }) imageSlider: ImageSliderComponent;
-
   TopMenu: TopMenu[] = [
     {
+      id: 1,
+      title: '热门',
+      link: 'hot'
+    },
+    {
+      id: 2,
+      title: '男装',
+      link: 'man'
+    },
+    {
+      id: 3,
+      title: '热门',
+      link: 'hot2'
+    },
+    {
+      id: 4,
+      title: '男装',
+      link: 'man'
+    },
+    {
+      id: 5,
       title: '热门',
       link: ''
     },
     {
+      id: 6,
       title: '男装',
       link: ''
     },
     {
+      id: 7,
       title: '热门',
       link: ''
     },
     {
+      id: 8,
       title: '男装',
       link: ''
     },
     {
+      id: 9,
+      title: '男装',
+      link: ''
+    },
+    {
+      id: 10,
       title: '热门',
       link: ''
     },
     {
+      id: 11,
       title: '男装',
       link: ''
     },
-    {
-      title: '热门',
-      link: ''
-    },
-    {
-      title: '男装',
-      link: ''
-    },
-    {
-      title: '男装',
-      link: ''
-    },
-    {
-      title: '热门',
-      link: ''
-    },
-    {
-      title: '男装',
-      link: ''
-    },
-  ];
-
-  /**
-   * 轮播图图片数组
-   */
-  imageSliders: ImageSlider[] = [
-    {
-      imageUrl: 'http://img4.imgtn.bdimg.com/it/u=2551121849,3276036345&fm=26&gp=0.jpg',
-      link: '',
-      caption: '五更琉璃',
-    },
-    {
-      imageUrl: 'http://img4.imgtn.bdimg.com/it/u=3099443564,3000777564&fm=26&gp=0.jpg',
-      link: '',
-      caption: '五更琉璃',
-    },
-    {
-      imageUrl: 'http://img1.imgtn.bdimg.com/it/u=281639794,1295715339&fm=26&gp=0.jpg',
-      link: '',
-      caption: '五更琉璃',
-    },
-    {
-      imageUrl: 'http://img4.imgtn.bdimg.com/it/u=2551121849,3276036345&fm=26&gp=0.jpg',
-      link: '',
-      caption: '五更琉璃',
-    },
-    {
-      imageUrl: 'http://img4.imgtn.bdimg.com/it/u=3099443564,3000777564&fm=26&gp=0.jpg',
-      link: '',
-      caption: '五更琉璃',
-    },
-    {
-      imageUrl: 'http://img1.imgtn.bdimg.com/it/u=281639794,1295715339&fm=26&gp=0.jpg',
-      link: '',
-      caption: '五更琉璃',
-    }
   ];
 
   /**
@@ -172,9 +78,8 @@ export class HomeContainerComponent implements OnInit, AfterViewInit {
     indicatorColor: 'green',
   };
 
-  username: string = '';
 
-  constructor() { }
+  constructor(private router: Router) { }
 
   /**
    * 处理滚动导航点击事件
@@ -182,6 +87,7 @@ export class HomeContainerComponent implements OnInit, AfterViewInit {
    */
   handleTabSelected(tabMenu: TopMenu) {
     console.log(tabMenu);
+    this.router.navigate(['home', tabMenu.link]);
   }
 
   handleChange() {

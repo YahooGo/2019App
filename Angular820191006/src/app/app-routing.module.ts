@@ -6,11 +6,17 @@ import { HomeContainerComponent } from './home';
 const routes: Routes = [
   {
     path: '', redirectTo: 'home', pathMatch: 'full',
+  },
 
+  /* {
+    path: '', redirectTo: 'home', pathMatch: 'full',
   },
   {
     path: 'home', component: HomeContainerComponent,
-  }
+  },
+  {
+    path: '**', component: HomeContainerComponent,
+  } */
 ];
 
 @NgModule({
